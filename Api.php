@@ -37,20 +37,35 @@ class Api
     /**
      * Конструктор.
      *
-     * @param array $options
+     * @param  array                     $options
+     * @throws \InvalidArgumentException
      */
     public function __construct(array $options = [])
     {
         if (isset($options['domain'])) {
             $this->domain = $options['domain'];
+        } else {
+            throw new \InvalidArgumentException('Parameter «domain» is required.');
         }
 
         if (isset($options['appId'])) {
             $this->domain = $options['appId'];
+        } else {
+            throw new \InvalidArgumentException('Parameter «appId» is required.');
         }
 
         if (isset($options['appKey'])) {
             $this->domain = $options['appKey'];
+        } else {
+            throw new \InvalidArgumentException('Parameter «appKey» is required.');
+        }
+
+        if (isset($options['scheme'])) {
+            if (in_array($options['scheme'], array('http', 'https'))) {
+                $this->scheme = $options['scheme'];
+            } else {
+                throw new \InvalidArgumentException('Parameter «scheme» should be one of [http, https] if passed.');
+            }
         }
     }
 
