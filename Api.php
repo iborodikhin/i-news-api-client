@@ -3,6 +3,25 @@ namespace Api;
 
 /**
  * Основной класс библиотеки для работы с API.
+ *
+ * @method \Api\Commands\CategoryGetAll    categoryGetAll()
+ * @method \Api\Commands\CategoryGetOne    categoryGetOne()
+ * @method \Api\Commands\CityGetAll        cityGetAll()
+ * @method \Api\Commands\CityGetMany       cityGetMany()
+ * @method \Api\Commands\CityGetOne        cityGetOne()
+ * @method \Api\Commands\CommentGetAll     commentGetAll()
+ * @method \Api\Commands\CommentGetMany    commentGetMany()
+ * @method \Api\Commands\CommentSave       commentSave()
+ * @method \Api\Commands\FeedGetAll        feedGetAll()
+ * @method \Api\Commands\FeedGetCategories feedGetCategories()
+ * @method \Api\Commands\FeedGetOne        feedGetOne()
+ * @method \Api\Commands\NewsGetMany       newsGetMany()
+ * @method \Api\Commands\NewsGetOne        newsGetOne()
+ * @method \Api\Commands\NewsSave          newsSave()
+ * @method \Api\Commands\NewsSearch        newsSearch()
+ * @method \Api\Commands\PersonGetAll      personGetAll()
+ * @method \Api\Commands\PersonGetMany     personGetMany()
+ * @method \Api\Commands\PersonGetOne      personGetOne()
  */
 class Api
 {
