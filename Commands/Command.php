@@ -141,7 +141,7 @@ abstract class Command
         );
 
         $browser = new Browser(new Curl());
-        $request = new FormRequest($this->method, $uri, $this->api->getDomain());
+        $request = new FormRequest($this->method, $uri);
 
         if ($this->method == RequestInterface::METHOD_POST && !empty($this->postParameters)) {
             foreach ($this->postParameters as $key => $value) {
