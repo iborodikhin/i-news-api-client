@@ -68,13 +68,13 @@ class Api
         }
 
         if (isset($options['appId'])) {
-            $this->domain = $options['appId'];
+            $this->appId = $options['appId'];
         } else {
             throw new \InvalidArgumentException('Parameter «appId» is required.');
         }
 
         if (isset($options['appKey'])) {
-            $this->domain = $options['appKey'];
+            $this->appKey = $options['appKey'];
         } else {
             throw new \InvalidArgumentException('Parameter «appKey» is required.');
         }
