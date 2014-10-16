@@ -4,9 +4,6 @@
     "require": {
         "kriswallsmith/buzz": "*"
     },
-    "require-dev": {
-        "kriswallsmith/buzz": "*"
-    },
     "authors": [
         {
             "name": "Igor Borodikhin",

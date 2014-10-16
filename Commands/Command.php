@@ -7,7 +7,7 @@ use Api\Exceptions\Json;
 use Buzz\Browser;
 use Buzz\Client\Curl;
 use Buzz\Message\Form\FormRequest;
-use \Buzz\Message\RequestInterface;
+use Buzz\Message\RequestInterface;
 
 /**
  * Базовый класс команды API.
@@ -141,7 +141,7 @@ abstract class Command
         );
 
         $browser = new Browser(new Curl());
-        $request = new FormRequest($this->method, $uri);
+        $request = new FormRequest($this->method, $uri, $this->api->getDomain());
 
         if ($this->method == RequestInterface::METHOD_POST && !empty($this->postParameters)) {
             foreach ($this->postParameters as $key => $value) {
