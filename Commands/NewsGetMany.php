@@ -13,7 +13,7 @@ class NewsGetMany extends Command
      *
      * @var string
      */
-    protected $uri = 'news/search';
+    protected $uri = 'news/get-many';
 
     /**
      * {@inheritdoc}
