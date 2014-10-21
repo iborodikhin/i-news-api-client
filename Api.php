@@ -12,6 +12,7 @@ namespace Api;
  * @method \Api\Commands\CommentGetAll        commentGetAll($newsId)
  * @method \Api\Commands\CommentGetMany       commentGetMany(array $ids)
  * @method \Api\Commands\CommentSave          commentSave(array $data)
+ * @method \Api\Commands\CommentSave          commentSearch(array $query, array $orderBy, $offset, $limit)
  * @method \Api\Commands\FeedGetAll           feedGetAll()
  * @method \Api\Commands\FeedGetCategories    feedGetCategories()
  * @method \Api\Commands\FeedGetOne           feedGetOne($id)
