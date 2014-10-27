@@ -13,7 +13,7 @@ class PersonGetMany extends Command
      *
      * @var string
      */
-    protected $uri = 'person/get-one';
+    protected $uri = 'person/get-many';
 
     /**
      * {@inheritdoc}
