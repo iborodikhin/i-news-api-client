@@ -18,6 +18,8 @@ namespace Api;
  * @method \Api\Commands\FeedGetOne           feedGetOne($id)
  * @method \Api\Commands\NewsGetMany          newsGetMany(array $ids)
  * @method \Api\Commands\NewsGetOne           newsGetOne($id)
+ * @method \Api\Commands\NewsKeywords         newsGetOne($id, $limit)
+ * @method \Api\Commands\NewsMoreLikeThis     newsGetOne($id, $limit)
  * @method \Api\Commands\NewsSave             newsSave(array $data)
  * @method \Api\Commands\NewsSearch           newsSearch(array $params)
  * @method \Api\Commands\NewsSearchAndGroupBy newsSearchAndGroupBy(array $query, $groupBy)

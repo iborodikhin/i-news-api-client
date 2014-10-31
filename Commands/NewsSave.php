@@ -1,6 +1,5 @@
 <?php
 namespace Api\Commands;
-
 use Api\Api;
 
 class NewsSave extends PostCommand
