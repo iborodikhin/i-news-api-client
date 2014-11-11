@@ -18,8 +18,8 @@ namespace Api;
  * @method \Api\Commands\FeedGetOne           feedGetOne($id)
  * @method \Api\Commands\NewsGetMany          newsGetMany(array $ids)
  * @method \Api\Commands\NewsGetOne           newsGetOne($id)
- * @method \Api\Commands\NewsKeywords         newsGetOne($id, $limit)
- * @method \Api\Commands\NewsMoreLikeThis     newsGetOne($id, $limit)
+ * @method \Api\Commands\NewsKeywords         newsGetKeywords($id, $limit)
+ * @method \Api\Commands\NewsMoreLikeThis     newsMoreLikeThis($id, $limit)
  * @method \Api\Commands\NewsSave             newsSave(array $data)
  * @method \Api\Commands\NewsSearch           newsSearch(array $params)
  * @method \Api\Commands\NewsSearchAndGroupBy newsSearchAndGroupBy(array $query, $groupBy)
@@ -56,6 +56,13 @@ class Api
      * @var null|string
      */
     protected $appKey = null;
+
+    /**
+     * Лог запросов в API.
+     *
+     * @var array
+     */
+    protected $queryLog = [];
 
     /**
      * Конструктор.
@@ -151,5 +158,25 @@ class Api
         }
 
         throw new Exceptions\NoCommandFoundException(sprintf('Command %s not found', ucfirst($methodName)));
+    }
+
+    /**
+     * Добавляет запись в лог запросов к API.
+     *
+     * @param array $log
+     */
+    public function appendLog(array $log)
+    {
+        $this->queryLog[] = $log;
+    }
+
+    /**
+     * Возвращает лог запросов к API.
+     *
+     * @return array
+     */
+    public function getLog()
+    {
+        return $this->queryLog;
     }
 }

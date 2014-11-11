@@ -129,6 +129,12 @@ abstract class Command
      */
     public function getResult()
     {
+        $log = [
+            'time' => microtime(true),
+            'uri'  => sprintf('%s?%s', $this->uri, http_build_query($this->queryParameters)),
+            'code' => 200,
+        ];
+
         $uri = sprintf(
             '%s://%s/%s?%s',
             $this->api->getScheme(),
@@ -150,12 +156,13 @@ abstract class Command
         }
 
         /** @var \Buzz\Message\Response $result */
-        $result = $browser->send($request);
+        $result    = $browser->send($request);
+        $exception = null;
 
         if ($result->isClientError() || $result->isServerError()) {
             switch ($result->getStatusCode()) {
                 case 404:
-                    throw new Http(sprintf(
+                    $exception = new Http(sprintf(
                         'API returned 404 on request to «%s»: %s',
                         $this->uri,
                         $result->getContent()
@@ -163,13 +170,21 @@ abstract class Command
                     break;
 
                 default:
-                    throw new Http(sprintf(
+                    $exception = new Http(sprintf(
                         'API returned 500 on request to «%s»: %s',
                         $this->uri,
                         $result->getContent()
                     ), 500);
                     break;
             }
+        }
+
+        if (null !== $exception) {
+            $log['time'] = microtime(true) - $log['time'];
+            $log['code'] = $exception->getCode();
+            $this->api->appendLog($log);
+
+            throw $exception;
         }
 
         $json  = json_decode($result->getContent(), true);
@@ -182,6 +197,9 @@ abstract class Command
                 $this->uri
             ));
         }
+
+        $log['time'] = microtime(true) - $log['time'];
+        $this->api->appendLog($log);
 
         return $json;
     }
