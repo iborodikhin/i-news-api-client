@@ -21,7 +21,7 @@ class CommentUnsubscribe extends Command
      * @param \Api\Api $api
      * @param string   $key
      */
-    public function __construct(Api $api, array $key = '')
+    public function __construct(Api $api, $key = '')
     {
         parent::__construct($api);
 
