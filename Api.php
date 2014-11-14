@@ -11,6 +11,7 @@ namespace Api;
  * @method \Api\Commands\CityGetOne           cityGetOne($id)
  * @method \Api\Commands\CommentGetAll        commentGetAll($newsId)
  * @method \Api\Commands\CommentGetMany       commentGetMany(array $ids)
+ * @method \Api\Commands\CommentGetOne        commentGetOne($id)
  * @method \Api\Commands\CommentRemove        commentRemove($id)
  * @method \Api\Commands\CommentSave          commentSave(array $data)
  * @method \Api\Commands\CommentSearch        commentSearch(array $query, array $orderBy, $offset, $limit)
