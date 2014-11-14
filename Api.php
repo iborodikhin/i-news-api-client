@@ -9,6 +9,7 @@ namespace Api;
  * @method \Api\Commands\CityGetAll           cityGetAll()
  * @method \Api\Commands\CityGetMany          cityGetMany(array $ids)
  * @method \Api\Commands\CityGetOne           cityGetOne($id)
+ * @method \Api\Commands\CommentBanIp         commentBanIp($id)
  * @method \Api\Commands\CommentGetAll        commentGetAll($newsId)
  * @method \Api\Commands\CommentGetMany       commentGetMany(array $ids)
  * @method \Api\Commands\CommentGetOne        commentGetOne($id)
