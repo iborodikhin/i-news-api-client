@@ -1,5 +1,5 @@
 {
-    "name": "root/i-news",
+    "name": "iborodikhin/i-news-api-client",
     "description": "i-News API client library",
     "require": {
         "kriswallsmith/buzz": "*"
