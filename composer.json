@@ -1,0 +1,13 @@
+{
+    "name": "root/i-news",
+    "description": "i-News API client library",
+    "require": {
+        "kriswallsmith/buzz": "*"
+    },
+    "authors": [
+        {
+            "name": "Igor Borodikhin",
+            "email": "iborodikhin@gmail.com"
+        }
+    ]
+}
