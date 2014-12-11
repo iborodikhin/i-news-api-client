@@ -1,4 +1,6 @@
 i-news-api-client
 =================
 
-Клиент для работы с API сайта i-News.kz
+Клиент PHP для работы с API сайта i-News.kz
+
+Ознакомиться с документацией по API можно [здесь](https://github.com/iborodikhin/i-news-api-docs).
