@@ -9,5 +9,8 @@
             "name": "Igor Borodikhin",
             "email": "iborodikhin@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": { "Api\\": "./" }
+    }
 }
