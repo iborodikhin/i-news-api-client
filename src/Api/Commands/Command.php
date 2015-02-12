@@ -142,7 +142,11 @@ abstract class Command
             $this->uri,
             http_build_query(array_merge(
                 $this->queryParameters,
-                ['appId' => $this->api->getAppId(), 'appKey' => $this->api->getAppKey()]
+                [
+                    'appId'   => $this->api->getAppId(),
+                    'appKey'  => $this->api->getAppKey(),
+                    'version' => $this->api->getVersion(),
+                ]
             ))
         );
 

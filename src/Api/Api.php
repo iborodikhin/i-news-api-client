@@ -64,6 +64,13 @@ class Api
     protected $appKey = null;
 
     /**
+     * Версия API.
+     *
+     * @var null|integer
+     */
+    protected $version = null;
+
+    /**
      * Лог запросов в API.
      *
      * @var array
@@ -94,6 +101,12 @@ class Api
             $this->appKey = $options['appKey'];
         } else {
             throw new \InvalidArgumentException('Parameter «appKey» is required.');
+        }
+
+        if (isset($options['version'])) {
+            $this->version = $options['version'];
+        } else {
+            throw new \InvalidArgumentException('Parameter «version» is required.');
         }
 
         if (isset($options['scheme'])) {
@@ -143,6 +156,16 @@ class Api
     public function getAppKey()
     {
         return $this->appKey;
+    }
+
+    /**
+     * Возвращает версию API.
+     *
+     * @return integer|null
+     */
+    public function getVersion()
+    {
+        return $this->version;
     }
 
     /**
