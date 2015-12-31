@@ -21,6 +21,8 @@ namespace Api;
  * @method \Api\Commands\FeedGetAll           feedGetAll()
  * @method \Api\Commands\FeedGetCategories    feedGetCategories()
  * @method \Api\Commands\FeedGetOne           feedGetOne($id)
+ * @method \Api\Commands\FeedRemove           feedRemove($id)
+ * @method \Api\Commands\FeedSave             feedSave(array $data)
  * @method \Api\Commands\NewsGetMany          newsGetMany(array $ids)
  * @method \Api\Commands\NewsGetOne           newsGetOne($id)
  * @method \Api\Commands\NewsKeywords         newsGetKeywords($id, $limit)
