@@ -9,6 +9,8 @@ namespace Api;
  * @method \Api\Commands\CityGetAll           cityGetAll()
  * @method \Api\Commands\CityGetMany          cityGetMany(array $ids)
  * @method \Api\Commands\CityGetOne           cityGetOne($id)
+ * @method \Api\Commands\CityRemove           cityRemove($id)
+ * @method \Api\Commands\CitySave             citySave(array $data)
  * @method \Api\Commands\CommentBanIp         commentBanIp($id)
  * @method \Api\Commands\CommentGetAll        commentGetAll($newsId)
  * @method \Api\Commands\CommentGetMany       commentGetMany(array $ids)
@@ -32,6 +34,8 @@ namespace Api;
  * @method \Api\Commands\PersonGetAll         personGetAll()
  * @method \Api\Commands\PersonGetMany        personGetMany(array $ids)
  * @method \Api\Commands\PersonGetOne         personGetOne($id)
+ * @method \Api\Commands\PersonRemove         personRemove($id)
+ * @method \Api\Commands\PersonSave           personSave(array $data)
  */
 class Api
 {
